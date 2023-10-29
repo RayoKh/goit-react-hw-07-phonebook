@@ -7,7 +7,7 @@ export const Contact = ({ contact, onDeleteContact }) => {
   return (
     <ListItem>
       <ContactItem>
-        {contact.name}: {contact.number}
+        {contact.name}: {contact.phone}
       </ContactItem>
       <button onClick={() => distpatch(onDeleteContact(contact.id))}>
         Видалити
