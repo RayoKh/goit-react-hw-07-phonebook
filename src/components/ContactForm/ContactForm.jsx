@@ -8,7 +8,7 @@ import {
 } from './ContactForm.styled';
 import * as yup from 'yup';
 import { nanoid } from '@reduxjs/toolkit';
-import { addContact } from 'redux/contactsSlice';
+import { addContacts } from 'redux/contactsІnteraction';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/selector';
 
@@ -57,8 +57,7 @@ export const ContactForm = () => {
     }
 
     dispatch(
-      addContact({
-        id: nanoid(),
+      addContacts({
         name: values.name,
         number: values.number,
       })
